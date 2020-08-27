@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+	<!--! Header -->
+	<header class="header">
+		<div class="container">
+			<div class="header_wrap">
+				<div class="logo">Delivery</div>
+				<div class="support">
+					<span class="support__text">Suppport</span>
+					<a class="support__email" href="mailto:info@spedihelfer.de">info@spedihelfer.de</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- end Header -->
+
+	<!-- ! Two General section with slider -->
+	<div class="bg">
+		<section class="average">
+			<div class="container">
+				<div class="wrap">
+					<div class="main-text">
+						<h1 class="main-text__title">
+							Lorem ipsum dolor sit amet, consectetur
+						</h1>
+						<p class="main-text__text">
+							Lorem ipsum dolor sit amet, consectetur
+						</p>
+					</div>
+
+					<div class="over_wrap_slick">
+						<div class="wrap-slick">
+							<!-- ! form -->
+							<form class="form">
+								<h3 class="form__title">Lorem-ipsum.com</h3>
+								<div class="alert alert-warning" v-if="errors.length">
+									<div class="panel-heading">doloremque laudantium:</div>
+									<div class="panel-body">
+										<ul>
+											<li v-for="error in errors" :key="error">{{ error }}</li>
+										</ul>
+									</div>
+								</div>
+								<div class="wrap-select">
+									<select class="form-inputs form-inputs_dropdown" v-model="delivery" @change="changeDelivery()">
+										<option value disabled selected>Delivery</option>
+										<option v-for="delivery in deliveryList.data" :value="delivery.id">
+											{{delivery.name}}
+										</option>
+									</select>
+								</div>
+								<div class="wrap-service-box" v-if="delivery">
+									<div class="wrap-select">
+										<label for>doloremque</label>
+										<select class="form-inputs form-inputs_dropdown" v-model="deliveryTime" @change="changeSum()">
+											<option v-for="timeDelivery in timeList.data" :value="timeDelivery">
+												{{timeDelivery.name}}
+											</option>
+										</select>
+									</div>
+									<!-- WOrking In progess -->
+									<div class="wrap-select multiselect">
+										<div class="selectBox">
+											<label for>laudantium</label>
+											<select class="form-inputs form-inputs_dropdown posit_bg" multiple="multiple"></select>
+										</div>
+										<div class="checkboxes">
+											<label v-for="(serviceDelivery) in serviceList.data">
+												<input type="checkbox" v-model="deliveryService" @change="changeSum()"
+													:value="serviceDelivery" />
+												{{serviceDelivery.name}}
+											</label>
+										</div>
+									</div>
+								</div>
+								<!-- ? block with time and date -->
+								<div class="form-celendar">
+									<h3 class="form-celendar__title">laudantium bis</h3>
+									<div class="form-celendar-wrap">
+										<div class="wrap-input">
+											<input class="form-inputs form-celendar-wrap__date" type="date" name="trip-start" :min="date"
+												max="2040-12-31" v-model="date" />
+										</div>
+									</div>
+								</div>
+								<span class="btn margin-bottom30 button-next-slide">laudantium Lorem</span>
+								<!-- dots for slick slider -->
+								<div class="my_dots_container"></div>
+							</form>
+
+							<!--! Average-two -->
+							<div class="average average-two">
+								<form class="form">
+									<h3 class="form__title">Lorem ipsum.sit</h3>
+									<div class="alert alert-warning" v-if="errors.length">
+										<div class="panel-heading">Lorem ipsum:</div>
+										<div class="panel-body">
+											<ul>
+												<li v-for="error in errors" :key="error">{{ error }}</li>
+											</ul>
+										</div>
+									</div>
+									<div class="form-celendar">
+										<div class="form-celendar-wrap">
+											<!-- ! fname -->
+											<div class="wrap-input_both">
+												<input type="text" class="form-inputs form-inputs_fname" name="fname" placeholder="Vorname"
+													v-model="firstName" />
+											</div>
+											<!-- !lname -->
+											<div class="wrap-input_both">
+												<input type="text" class="form-inputs form-inputs_lname" name="lname" placeholder="Nachname"
+													v-model="lastName" />
+											</div>
+										</div>
+										<!-- ! new inputs -->
+										<div class="form-celendar-wrap form-celendar-wrap_elem">
+											<!-- ? email -->
+											<div class="wrap-select">
+												<input type="email" name="email" class="form-inputs form-inputs_email" placeholder="Email"
+													size="30" required v-model="email" />
+											</div>
+											<!-- ! Address input -->
+											<div class="wrap-select">
+												<input type="text" class="form-inputs form-inputs_address" name="address" placeholder="Adresse"
+													v-model="address" />
+											</div>
+											<!-- ! block wiht 2 inouts (Postleitzahl & Stadt) -->
+											<div class="form-celendar-wrap">
+												<div class="wrap-input_both">
+													<input type="text" class="form-inputs form-inputs_postleitzahl" name="Postleitzahl"
+														placeholder="Postleitzahl" v-model="postCode" />
+												</div>
+												<div class="wrap-input_both">
+													<input type="text" class="form-inputs form-inputs_stadt" name="lname" placeholder="Stadt"
+														v-model="city" />
+												</div>
+											</div>
+											<!-- ! enother inputs with number (Mobiletelefon & Sendungsnummer) -->
+											<div class="form-celendar-wrap_elem W_100">
+												<div class="wrap-select">
+													<input type="tel" class="form-inputs form-inputs_tel" name="tel" placeholder="Mobiletelefon"
+														v-model="phone" />
+												</div>
+												<div class="wrap-select wrap-select_option">
+													<input type="text" class="form-inputs form-inputs_number" name="number"
+														placeholder="Sendungsnummer" v-model="deliveryСode" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<span class="btn margin-bottom30" @click="checkForm()">Lorem ipsum dolor</span>
+									<!-- dots for slick slider -->
+									<div class="my_dots_container"></div>
+								</form>
+							</div>
+							<div class="average average-three">
+								<form class="form">
+									<div class="alert alert-warning" v-if="errors.length">
+										<div class="panel-heading">Lorem_ipsum_dolor:</div>
+										<div class="panel-body">
+											<ul>
+												<li v-for="error in errors" :key="error">{{ error }}</li>
+											</ul>
+										</div>
+									</div>
+
+									<h3 class="form__title">Lorem ipsum_</h3>
+									<div class="order_table">
+										<div class="order_table_row">
+											<div class="service-title">
+												<strong>Lorem ipsum dolor sit ame</strong>
+											</div>
+											<div class="service-cost">
+												<strong>Lorem ipsum dolor</strong>
+											</div>
+										</div>
+										<div class="order_table_row" v-if="deliveryTime">
+											<div class="service-title">{{deliveryTime.name}}</div>
+											<div class="service-cost">{{deliveryTime.cost}}€</div>
+										</div>
+										<div class="order_table_row" v-for="item in deliveryService">
+											<div class="service-title">{{item.name}}</div>
+											<div class="service-cost">{{item.cost}}€</div>
+										</div>
+										<div class="persent_row">
+											<div class="persent-title">MwSt {{this.tax}}%</div>
+											<div class="persent-cost">{{this.sumTax}}€</div>
+										</div>
+										<div class="persent_row">
+											<div class="persent-title">Bezahlen</div>
+											<div class="persent-cost">{{this.sumAll}}€</div>
+										</div>
+										<span class="btn margin-top30" @click="makeOrder()">Bestellen</span>
+									</div>
+									<!-- dots for slick slider -->
+									<div class="my_dots_container" v-bind:class="{ averageThreeShow: readyToPayment}"></div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<section class="service">
+		<div class="container">
+			<div class="service-row">
+				<div class="service-wrap">
+					<div class="service-wrap__item">
+						<div class="service-wrap__img">
+							<img class="img-responsive img-width" src="../src/img/round-the-clock.svg" alt="round-the-clock" />
+						</div>
+						<div class="service-wrap__text">WatsApp Live Chat</div>
+					</div>
+				</div>
+				<div class="service-wrap">
+					<div class="service-wrap__item">
+						<div class="service-wrap__img">
+							<img class="img-responsive img-width" src="../src/img/Group.svg" alt="round-the-clock" />
+						</div>
+						<div class="service-wrap__text padding_15_8_0">
+							Über 45 Min Verspätung 100%
+						</div>
+					</div>
+				</div>
+
+				<div class="service-wrap">
+					<div class="service-wrap__item">
+						<div class="service-wrap__img">
+							<img class="img-responsive img-width" src="../src/img/delivery-scheduled.svg" alt="round-the-clock" />
+						</div>
+
+						<div class="service-wrap__text padding_15_8_0">
+							Je 10Min Verspätung - 10%
+						</div>
+					</div>
+				</div>
+
+				<div class="service-wrap">
+					<div class="service-wrap__item">
+						<div class="service-wrap__img">
+							<img class="img-responsive img-width" src="../src/img/platform-scale.svg" alt="round-the-clock" />
+						</div>
+
+						<div class="service-wrap__text padding_15_3_0">
+							Bewerte deine Zustellung
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ? container was put in _vars.scss -->
+
+	<!-- ! Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-wrap">
+				<div class="footer-delivery">Delivery</div>
+				<div class="footer-socials">
+					<a href="https://twitter.com/?lang=uk" class="footer-socials__link twitter" target="_blank"></a>
+					<a href="https://uk-ua.facebook.com/" class="footer-socials__link facebook" target="_blank"></a>
+					<a href="https://www.instagram.com/?hl=uk" class="footer-socials__link instagram" target="_blank"></a>
+				</div>
+				<div class="footer-res">
+					<p class="footer-res__text">
+						©2020 - Delivery | All right reserved
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

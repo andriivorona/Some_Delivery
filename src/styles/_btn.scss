@@ -1,0 +1,27 @@
+.btn {
+	font-weight: $font-w700;
+	font-size: $fz16;
+	line-height: $lh20;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $logo;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	color: $text-while;
+	padding: 13px 107px;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background: $color_support;
+
+		&:active {
+			transform: scale(0.96);
+		}
+	}
+
+	&.margin-bottom30 {
+		margin-bottom: 30px;
+	}
+}

@@ -1,0 +1,18 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M63.75 40H56.25V71.25H63.75V40Z" fill="#EEEEEE"/>
+<path d="M60 41.25C71.0457 41.25 80 32.2957 80 21.25C80 10.2043 71.0457 1.25 60 1.25C48.9543 1.25 40 10.2043 40 21.25C40 32.2957 48.9543 41.25 60 41.25Z" fill="#EEEEEE"/>
+<path d="M60 36.25C68.2843 36.25 75 29.5343 75 21.25C75 12.9657 68.2843 6.25 60 6.25C51.7157 6.25 45 12.9657 45 21.25C45 29.5343 51.7157 36.25 60 36.25Z" fill="#BFCFDF"/>
+<path d="M68.875 30.125C64 35 56.125 35 51.25 30.125" stroke="#EEEEEE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M51.125 12.375C56 7.5 64 7.5 68.875 12.375" stroke="#E1F5FE" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M77.5 78.75H1.25C0.5 78.75 0 78.25 0 77.5V72.5C0 71.75 0.5 71.25 1.25 71.25H77.5C78.25 71.25 78.75 71.75 78.75 72.5V77.5C78.75 78.25 78.25 78.75 77.5 78.75Z" fill="#EEEEEE"/>
+<path d="M61.75 23L58.25 19.5L69.25 12L61.75 23Z" fill="#EC407A"/>
+<path d="M60 24.375C61.7259 24.375 63.125 22.9759 63.125 21.25C63.125 19.5241 61.7259 18.125 60 18.125C58.2741 18.125 56.875 19.5241 56.875 21.25C56.875 22.9759 58.2741 24.375 60 24.375Z" fill="#8CA3B9"/>
+<path d="M2.5 76.25H76.25" stroke="#BDBDBD" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M41.25 71.25H6.25C5.5 71.25 5 70.75 5 70V48.75H42.5V70C42.5 70.75 42 71.25 41.25 71.25Z" fill="#FFA726"/>
+<path d="M7.5 68.75H40" stroke="#F57C00" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.5 51.25H40" stroke="#FFCC80" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.25 61.25H8.75V66.25H16.25V61.25Z" fill="#EEEEEE"/>
+<path d="M3.75 38.75V47.5C3.75 48.25 4.25 48.75 5 48.75H42.5C43.25 48.75 43.75 48.25 43.75 47.5V38.75C43.75 38 43.25 37.5 42.5 37.5H5C4.25 37.5 3.75 38 3.75 38.75Z" fill="#EC407A"/>
+<path d="M6.25 40H41.25" stroke="#F48FB1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.25 46.25H41.25" stroke="#D81B60" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

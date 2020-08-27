@@ -1,0 +1,153 @@
+@import "../styles/vars";
+
+/* media query */
+
+@media (max-width: 768px) {
+	.header {
+		padding: 15px 20px 25px;
+		margin: 0;
+	}
+
+	.average {
+		.wrap {
+			flex-flow: row wrap;
+
+			.main-text {
+				margin: 20px 0 0;
+				max-width: 100%;
+				text-align: center;
+
+				&__title {
+					flex: 100%;
+				}
+			}
+		}
+
+		.over_wrap_slick {
+			max-width: 100%;
+			width: 100%;
+		}
+
+		.form {
+			max-width: 100%;
+			margin: 40px auto 0;
+		}
+
+		&.average-two {
+			.form {
+				margin: 40px auto 0;
+			}
+		}
+	}
+
+	.over_wrap_slick {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.form {
+		max-width: 100%;
+		margin: 40px auto 0;
+		max-width: 100%;
+	}
+
+	.service {
+		display: flex;
+		padding: 10px;
+		justify-content: center;
+		align-items: center;
+
+		.service-row {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+
+			.service-wrap {
+				max-width: 100%;
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 496px) {
+	.footer-wrap {
+		.footer-res__text {
+			padding-top: 10px;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.form-celendar-wrap_elem {
+		.label-optional {
+			&::after {
+				content: "" !important;
+			}
+		}
+	}
+
+	.main-text {
+		margin: 20px 0 0;
+	}
+
+	.average .main-text__title {
+		font-size: 2rem;
+		line-height: 2rem;
+		padding-bottom: 12px;
+	}
+
+	.btn {
+		padding: 12px 60px;
+	}
+
+	.footer-delivery {
+		width: 100%;
+		justify-content: center;
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.footer-socials {
+		width: 100%;
+	}
+
+	.footer-res {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+}
+
+@media (max-width: 375px) {
+	.average .form {
+		padding: 20px 20px 40px 20px;
+	}
+
+	.wrap-input_both {
+		width: 100%;
+	}
+
+	.average.average-two .form-inputs_fname {
+		margin-bottom: 30px;
+	}
+
+	.btn {
+		padding: 12px 30px;
+		font-size: 1rem;
+		line-height: 1rem;
+		text-transform: none;
+	}
+}
+
+@media (max-width: 320px) {
+	.footer-socials {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

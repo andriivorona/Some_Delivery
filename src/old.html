@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <main class="main">
+      <!--! Header -->
+      <div class="container">
+        <!-- container was put in _vars.scss -->
+        <header class="header">
+          <div class="logo">Delivery</div>
+          <div class="support">
+            <span class="support__text">Suppport</span>
+            <a class="support__email" href="mailto:info@spedihelfer.de"
+              >info@spedihelfer.de</a
+            >
+          </div>
+        </header>
+      </div>
+      <!-- end Header -->
+
+      <!-- ! Two General section with slider -->
+      <div class="wrap-slick">
+        <section class="average">
+          <div class="container">
+            <div class="wrap">
+              <div class="main-text">
+                <h1 class="main-text__title">
+                  Nach viertel eins, macht jeder seins
+                </h1>
+                <p class="main-text__text">
+                  Zustellung bis 12:15 mit Geld-zurück-Garantie
+                </p>
+              </div>
+              <!-- ! form -->
+              <form class="form">
+                <h3 class="form__title">Spedihelfer.de</h3>
+                <select
+                  id="spedition"
+                  name="spedition"
+                  class="form-inputs form-inputs_dropdown"
+                >
+                  <option value="" disabled selected hidden>Spedition</option>
+                  <option value="1">1</option>
+                  <option value="0">2</option>
+                </select>
+                <!-- ? block with time and date -->
+                <div class="form-celendar">
+                  <h3 class="form-celendar__title">Zustellung bis</h3>
+                  <div class="form-celendar-wrap">
+                    <label for="appt-time "></label>
+                    <input
+                      id="appt-time"
+                      class="form-inputs form-celendar-wrap__time"
+                      type="time"
+                      name="appt-time"
+                    />
+
+                    <label for="date"></label>
+                    <input
+                      class="form-inputs form-celendar-wrap__date"
+                      type="date"
+                      id="date"
+                      name="trip-start"
+                      value="2020-07-31"
+                      min="2040-01-01"
+                      max="2040-12-31"
+                    />
+                  </div>
+                </div>
+                <button type="submit" class="btn margin-bottom30">
+                  DATEN EINGEBEN
+                </button>
+                <!-- ! if we will be need wrrows for slider -->
+                <!-- <div class="my-arrow-next"></div>
+                <div class="my-arrow-prev"></div> -->
+                <div class="my_dots_container"></div>
+              </form>
+              <!--end form -->
+            </div>
+          </div>
+        </section>
+        <!--! Average-two -->
+        <section class="average average-two">
+          <div class="container">
+            <div class="wrap">
+              <div class="main-text">
+                <h1 class="main-text__title">
+                  Nach viertel eins, macht jeder seins
+                </h1>
+                <p class="main-text__text">
+                  Zustellung bis 12:15 mit Geld-zurück-Garantie
+                </p>
+              </div>
+              <!-- ? form for Average-two of twoth form -->
+              <form class="form">
+                <h3 class="form__title">Spedihelfer.de</h3>
+                <div class="form-celendar">
+                  <div class="form-celendar-wrap">
+                    <!-- ! fname -->
+                    <label for="fname"></label>
+                    <input
+                      type="text"
+                      id="fname"
+                      class="form-inputs form-inputs_fname"
+                      name="fname"
+                      placeholder="Varnamen"
+                    />
+                    <!-- !lname -->
+                    <label for="lname"></label>
+                    <input
+                      type="text"
+                      id="lname"
+                      class="form-inputs form-inputs_lname"
+                      name="lname"
+                      placeholder="Nachname"
+                    />
+                  </div>
+                  <!-- ! new inputs -->
+                  <div class="form-celendar-wrap form-celendar-wrap_elem">
+                    <!-- ? email -->
+                    <label for="email	"></label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-inputs form-inputs_email"
+                      placeholder="Email"
+                      pattern=".+@globex.com"
+                      size="30"
+                      required
+                    />
+                    <!-- ! Spendition input -->
+                    <select
+                      id="spedition"
+                      name="spedition"
+                      class="form-inputs form-inputs_dropdown"
+                    >
+                      <option value="" disabled selected hidden
+                        >Spedition</option
+                      >
+                      <option value="1">1</option>
+                      <option value="0">2</option>
+                    </select>
+                    <!-- ! Address input -->
+                    <label for="address"></label>
+                    <input
+                      type="text"
+                      id="address"
+                      class="form-inputs form-inputs_address"
+                      name="address"
+                      placeholder="Adresse"
+                    />
+                    <!-- ! block wiht 2 inouts (Postleitzahl & Stadt) -->
+                    <div class="form-celendar-wrap">
+                      <label for="Postleitzahl"></label>
+                      <input
+                        type="text"
+                        id="Postleitzahl"
+                        class="form-inputs form-inputs_postleitzahl"
+                        name="Postleitzahl"
+                        placeholder="Postleitzahl"
+                      />
+
+                      <label for="Stadt"></label>
+                      <input
+                        type="text"
+                        id="Stadt"
+                        class="form-inputs form-inputs_stadt"
+                        name="lname"
+                        placeholder="Stadt"
+                      />
+                    </div>
+                    <!-- ! enother inputs with number (Mobiletelefon & Sendungsnummer) -->
+                    <div class="form-celendar-wrap_elem">
+                      <label for="tel"></label>
+                      <input
+                        type="tel"
+                        id="tel"
+                        class="form-inputs form-inputs_tel"
+                        name="tel"
+                        placeholder="Mobiletelefon"
+                      />
+                      <label class="label-optional" for="number"></label>
+                      <input
+                        type="number"
+                        id="number"
+                        class="form-inputs form-inputs_number"
+                        name="number"
+                        placeholder="Sendungsnummer"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn margin-bottom30">
+                  DATEN EINGEBEN
+                </button>
+                <!-- ! if we will be need wrrows for slider -->
+                <!-- <div class="my-arrow-next"></div>
+                <div class="my-arrow-prev"></div> -->
+                <div class="my_dots_container"></div>
+              </form>
+              <!-- ? end form -->
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="service">
+        <div class="container">
+          <div class="service-row">
+            <div class="service-wrap">
+              <div class="service-wrap__item">
+                <div class="service-wrap__img">
+                  <img
+                    class="img-responsive img-width"
+                    src="../src/img/round-the-clock.svg"
+                    alt="round-the-clock"
+                  />
+                </div>
+                <div class="service-wrap__text">WatsApp Live Chat</div>
+              </div>
+            </div>
+            <div class="service-wrap">
+              <div class="service-wrap__item">
+                <div class="service-wrap__img">
+                  <img
+                    class="img-responsive img-width"
+                    src="../src/img/Group.svg"
+                    alt="round-the-clock"
+                  />
+                </div>
+                <div class="service-wrap__text padding_15_8_0">
+                  Über 45 Min Verspätung 100%
+                </div>
+              </div>
+            </div>
+
+            <div class="service-wrap">
+              <div class="service-wrap__item">
+                <div class="service-wrap__img">
+                  <img
+                    class="img-responsive img-width"
+                    src="../src/img/delivery-scheduled.svg"
+                    alt="round-the-clock"
+                  />
+                </div>
+
+                <div class="service-wrap__text padding_15_8_0">
+                  Je 10Min Verspätung - 10%
+                </div>
+              </div>
+            </div>
+
+            <div class="service-wrap">
+              <div class="service-wrap__item">
+                <div class="service-wrap__img">
+                  <img
+                    class="img-responsive img-width"
+                    src="../src/img/platform-scale.svg"
+                    alt="round-the-clock"
+                  />
+                </div>
+
+                <div class="service-wrap__text padding_15_3_0">
+                  Bewerte deine Zustellung
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ? container was put in _vars.scss -->
+      <div class="container">
+        <!-- ! Footer -->
+        <footer class="footer">
+          <div class="footer-wrap">
+            <div class="footer-delivery">Delivery</div>
+            <div class="footer-socials">
+              <a
+                href="https://twitter.com/?lang=uk"
+                class="footer-socials__link twitter"
+                target="_blank"
+              ></a>
+              <a
+                href="https://uk-ua.facebook.com/"
+                class="footer-socials__link facebook"
+                target="_blank"
+              ></a>
+              <a
+                href="https://www.instagram.com/?hl=uk"
+                class="footer-socials__link instagram"
+                target="_blank"
+              ></a>
+            </div>
+            <div class="footer-res">
+              <p class="footer-res__text">
+                ©2020 - Delivery | All right reserved
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>

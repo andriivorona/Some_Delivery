@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+/* bg for logo too */
+.container {
+  max-width: 1100px;
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* // ? Typography*/
+/* media query */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px 25px;
+    margin: 0;
+  }
+
+  .average .wrap {
+    flex-flow: row wrap;
+  }
+  .average .wrap .main-text {
+    margin: 20px 0 0;
+    max-width: 100%;
+    text-align: center;
+  }
+  .average .wrap .main-text__title {
+    flex: 100%;
+  }
+  .average .over_wrap_slick {
+    max-width: 100%;
+    width: 100%;
+  }
+  .average .form {
+    max-width: 100%;
+    margin: 40px auto 0;
+  }
+  .average.average-two .form {
+    margin: 40px auto 0;
+  }
+
+  .over_wrap_slick {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .form {
+    max-width: 100%;
+    margin: 40px auto 0;
+    max-width: 100%;
+  }
+
+  .service {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .service .service-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .service .service-row .service-wrap {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 496px) {
+  .footer-wrap .footer-res__text {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .form-celendar-wrap_elem .label-optional::after {
+    content: "" !important;
+  }
+
+  .main-text {
+    margin: 20px 0 0;
+  }
+
+  .average .main-text__title {
+    font-size: 2rem;
+    line-height: 2rem;
+    padding-bottom: 12px;
+  }
+
+  .btn {
+    padding: 12px 60px;
+  }
+
+  .footer-delivery {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .footer-socials {
+    width: 100%;
+  }
+
+  .footer-res {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .average .form {
+    padding: 20px 20px 40px 20px;
+  }
+
+  .wrap-input_both {
+    width: 100%;
+  }
+
+  .average.average-two .form-inputs_fname {
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-transform: none;
+  }
+}
+@media (max-width: 320px) {
+  .footer-socials {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
